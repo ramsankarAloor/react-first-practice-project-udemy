@@ -4,6 +4,10 @@
   max-width: 40rem;
 }
 
+.hide {
+    display: none;
+}
+
 .users ul {
   list-style:none;
   padding: 1rem;
