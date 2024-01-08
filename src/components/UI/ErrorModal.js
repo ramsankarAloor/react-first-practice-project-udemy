@@ -1,10 +1,11 @@
+import React from "react";
 import classes from "./ErrorModal.module.css";
 import Card from "./Card";
 import Button from "./Button";
 
 const ErrorModal = (props) => {
   return (
-    <div>
+    <React.Fragment> 
       <div className={classes.backdrop} onClick={props.onConfirm} />
       <Card className={classes.modal}>
         <header className={classes.header}>
@@ -17,8 +18,10 @@ const ErrorModal = (props) => {
           <Button onClick={props.onConfirm}>Ok</Button>
         </footer>
       </Card>
-    </div>
+    </React.Fragment>
   );
 };
+// we can also interchangably use <></> here instead of React.Fragment, both have the same purpose,
+// to  avoid div soup, that is unnecessary creation of div s in the DOM.
 
 export default ErrorModal;
